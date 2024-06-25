@@ -221,25 +221,26 @@ footer {
       grid-template-columns: repeat(2, 1fr);
   }
 
-  body{display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background-image: url('/public/images/site/checkerboard.jpg');
-  background-size: cover;
-  /* background-position: center;
-  background-repeat: no-repeat; */
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('/images/site/checkerboard.jpg');
+    background-size: cover;
+    /* background-position: center;
+    background-repeat: no-repeat;  */
   
   }
 
-  .wrapper {
+  #wrapper {
       background-color: rgba(255, 255, 255, 0.9);
       padding: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
-      width: 80%;
-      max-width: 800px;
+      width: 85%;
+      max-width: 850px;
       border: 3px solid var(--secondary-color)
   }
 }
