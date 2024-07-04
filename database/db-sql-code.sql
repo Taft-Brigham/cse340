@@ -4,7 +4,7 @@ CREATE TYPE public.account_type AS ENUM
 
 -- DROP TYPE IF EXISTS public.account_type;
 ALTER TYPE public.account_type
-    OWNER TO cardb_t5vg_user;
+    OWNER TO taftdb;
 
 
 
