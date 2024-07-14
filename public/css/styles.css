@@ -81,6 +81,60 @@ nav {
   background-color: var(--secondary-color);
 }
 
+/* -------------Display styles begin here ----------------- */
+/* Inventory Display List */
+#inv-display {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Inventory Item */
+#inv-display li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: calc(33% - 20px); /* Responsive three-column layout */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+#inv-display li:hover {
+  transform: scale(1.05);
+}
+
+/* Image Styling */
+#inv-display li img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Name and Price Styling */
+#inv-display .namePrice {
+  text-align: center;
+}
+
+#inv-display .namePrice h2 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+#inv-display .namePrice span {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.1em;
+  color: #333;
+  font-weight: bold;
+}
+
+
 /* Header styles */
 #top-header {
   background-color: var(--header-text-color);
@@ -217,6 +271,19 @@ footer {
   text-align: center;
   background-color: var(--primary-color);
   color: var(--header-text-color);
+}
+/* -----Car display queries for different screen sizes----- */
+/* Responsive Design */
+@media (max-width: 1200px) {
+  #inv-display li {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 768px) {
+  #inv-display li {
+    width: calc(100% - 20px); 
+  }
 }
 
 /* styles for large screen */
