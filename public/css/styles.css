@@ -38,19 +38,43 @@ nav {
   padding: 5px;
 }
 
+nav {
+  width: 100%;
+  margin: 5px auto;
+  padding: 5px;
+}
+
 .navigation {
   display: flex;
-  list-style: none;
+  justify-content: center;
   background-color: #333;
-  color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navigation li {
+  margin: 0;
 }
 
 .navigation a {
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-align: center;
   text-decoration: none;
-  color: var(--header-text-color);
-  flex: 1;
+  color: #fff;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+  background-color: #575757;
 }
 
 .navigation .active {
@@ -209,13 +233,12 @@ footer {
   }
 
   .navigation {
-      flex-direction: row;
-  }
+    flex-direction: row;
+}
 
-  .navigation a {
-      display: block;
-      flex: 1 1 100%;
-  }
+.navigation a {
+    flex: 1;
+}
 
   .upgrades {
       grid-template-columns: repeat(2, 1fr);
