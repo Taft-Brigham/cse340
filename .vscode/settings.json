@@ -10,7 +10,7 @@
             "server": "localhost",
             "driver": "PostgreSQL",
             "name": "render.com",
-            "connectString": "postgresql://taftdb:jyjdiJ0bTKM8lEssMALSXTWReXNVFnhe@dpg-cq2vbpqju9rs7394kdkg-a.ohio-postgres.render.com/taftdb"
+            "connectString": "postgresql://taftbrigham:1NHZYbFZKLg1u7l4Hl8K0vDtsZayiAPV@dpg-cqbca8mehbks73dnvgpg-a.oregon-postgres.render.com/taftbrigham"
         }
     ]
 }

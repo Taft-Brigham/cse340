@@ -311,6 +311,65 @@ footer {
       grid-template-columns: repeat(2, 1fr);
   }
 
+
+  /* ----------error mesage and error page style--------- */
+  .error-container {
+    background-image: url('/images/site/404-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.error-container h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.error-message {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.error-message p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .error-container h1 {
+      font-size: 2em;
+  }
+
+  .error-message p {
+      font-size: 1em;
+  }
+}
+
+/* styles for the datials.ejs page  */
+.vehicle-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.vehicle-detail img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .vehicle-detail {
+    flex-direction: column;
+  }
+}
+
+
   body{
     display: flex;
     justify-content: center;
