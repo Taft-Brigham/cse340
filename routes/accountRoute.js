@@ -1,9 +1,9 @@
 // Needed Resources 
 const express = require("express")
 const router = new express.Router() 
-
 const accController = require("../controllers/accountController")
 const Util = require("../utilities")
+const regValidate = require('../utilities/account-validation')
 
 // Route to handle "My Account" link click
 router.get("/login", accController.buildLogin)
@@ -12,7 +12,12 @@ router.get("/login", accController.buildLogin)
 router.get("/register", accController.buildRegistration)
 
 //route to handle post 
-router.post('/register', Util.handleErrors(accController.registerAccount))
+router.post(
+    "/register",
+    regValidate.registationRules(),
+    regValidate.checkRegData, 
+    Util.handleErrors(accController.registerAccount)
+  )
 
 // Error handler middleware
 router.use((err, req, res, next) => {
