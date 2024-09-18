@@ -11,6 +11,9 @@ router.get("/login", accController.buildLogin)
 //route to handle "registration" link when clicked
 router.get("/register", accController.buildRegistration)
 
+// Deliver the account management view
+router.get("/", Util.handleErrors(accController.accountManagement));
+
 //route to handle post 
 router.post(
     "/register",
@@ -18,6 +21,14 @@ router.post(
     regValidate.checkRegData, 
     Util.handleErrors(accController.registerAccount)
   )
+
+// Process the login request
+router.post(
+  "/login",
+  regValidate.loginRules(),
+  regValidate.checkLoginData,
+  Util.handleErrors(accController.accountLogin)
+)
 
 // Error handler middleware
 router.use((err, req, res, next) => {
